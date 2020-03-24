@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/name"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <ScrollView
+        android:layout_width="600dp"
+        android:layout_height="380dp"
+        android:layout_below="@+id/name"
+        android:id="@+id/description_layout"
+        android:layout_weight="0.52"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="店主没有添加店铺描述"
+            android:id="@+id/description"
+            android:layout_margin="8dp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@+id/description_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="关闭"
+            android:id="@+id/close"
+            android:layout_weight="1"
+            android:textColor="@color/button_text"
+            android:background="@color/button"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>

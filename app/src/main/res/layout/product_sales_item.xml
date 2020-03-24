@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/img" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:gravity="fill_vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/remove"
+                android:background="@drawable/ic_delete"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单价"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/price"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个数"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/count"
+                android:gravity="center_vertical"
+                style="@style/EditTextStyle"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:editable="false"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总计"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/summary"
+                android:layout_weight="1"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:layout_marginRight="8dp" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

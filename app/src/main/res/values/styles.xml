@@ -1,11 +1,18 @@
 <resources>
 
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarTabBarStyle">@style/MyActionBarTabStyle</item>
+        <item name="android:actionBarTabTextStyle">@style/MytitleTextStyle</item>
+
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -13,8 +20,58 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="android:backgroundSplit">@android:color/white</item>
+    </style>
+
+    <style name="MyActionBarTabStyle" parent="android:style/Widget.Holo.Light.ActionBar.TabBar">
+        <item name="android:background">@color/actionbar_background</item>
+        <item name="android:backgroundSplit">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+
+    </style>
+
+    <style name="MytitleTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    //默认样式
+
+    <style name="BtnStyle" parent="android:style/TextAppearance.Holo.Widget.Button">
+        <item name="android:background">@color/btn_normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minHeight">28dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="BtnStyleActive" parent="android:style/TextAppearance.Holo.Widget.Button">
+        <item name="android:background">@color/btn_active</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minHeight">28dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="ImgBtnStyle" parent="android:style/TextAppearance.Holo.Widget.Button">
+        <item name="android:background">@color/btn_normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minHeight">28dp</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="EditTextStyle" parent="android:style/TextAppearance.Holo.Widget.EditText">
+        <item name="android:background">@drawable/border_edittext</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:cursorVisible">true</item>
+
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

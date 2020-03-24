@@ -13,6 +13,8 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
 
+import com.bumptech.glide.request.RequestOptions;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -86,6 +88,8 @@ public class AppContext extends Application {
 
     private FirstOpen firstOpen;
 
+    public RequestOptions glideRequestOptions;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -153,6 +157,9 @@ public class AppContext extends Application {
         dMgr = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
 
 //        salesList = new HashMap<Long, Product>();
+
+        glideRequestOptions = new RequestOptions()
+                .centerCrop();
     }
 
     /**

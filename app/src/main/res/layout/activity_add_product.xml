@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddProductActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="im.supai.supaimarketing.activity.AddProductActivity">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/alias"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_column="1"
+                    android:layout_columnSpan="3"
+                    android:layout_row="1"
+                    android:layout_rowSpan="1"
+                    android:maxLength="30"
+                    style="@style/EditTextStyle" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/alias"
+                    android:id="@+id/info_layout"
+                    android:columnCount="4"
+                    android:rowCount="10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="条形码编号"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnSpan="1"
+                        android:layout_rowSpan="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rccode"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_columnSpan="1"
+                        android:layout_rowSpan="1"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:layout_marginRight="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生产厂家"
+                        android:layout_column="0"
+                        android:layout_row="2"
+                        android:layout_columnSpan="3"
+                        android:layout_rowSpan="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/merchant"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        android:layout_columnSpan="3"
+                        android:layout_rowSpan="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="产地"
+                        android:layout_row="3"
+                        android:layout_column="0"
+                        android:layout_columnSpan="1"
+                        android:layout_rowSpan="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/origin"
+                        android:layout_row="3"
+                        android:layout_column="1"
+                        android:layout_columnSpan="3"
+                        android:layout_rowSpan="1"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格区间(元)"
+                        android:layout_row="4"
+                        android:layout_column="0"
+                        android:layout_columnSpan="1"
+                        android:layout_rowSpan="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/price_interval"
+                        android:layout_column="1"
+                        android:layout_row="4"
+                        android:layout_columnSpan="3"
+                        android:layout_rowSpan="1"
+                        android:singleLine="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp" />
+
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_container"
+                    android:layout_below="@+id/info_layout"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="horizontal"
+                    android:minHeight="100dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_action"
+                    android:layout_below="@+id/img_container"
+                    >
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="更换图片"
+                        android:id="@+id/change_img"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/button_text"
+                        android:background="@color/button"
+                        style="@style/BtnStyle" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="本地图片选择"
+                        android:id="@+id/from_album"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/button"
+                        android:textColor="@color/button_text"
+                        style="@style/BtnStyle" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="拍照"
+                        android:id="@+id/from_camera"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/button"
+                        android:textColor="@color/button_text"
+                        style="@style/BtnStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/img_action"
+                    android:id="@+id/description_layout"
+                    >
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:ems="10"
+                        android:id="@+id/description"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:minHeight="100dp"
+                        android:hint="输入商品的描述信息"
+                        style="@style/EditTextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/form_layout"
+                    android:layout_below="@+id/description_layout"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/price"
+                        android:singleLine="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        style="@style/EditTextStyle"
+                        android:hint="价格"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/count"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="库存数(可以不填)"
+                        style="@style/EditTextStyle" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="添加商品"
+                    android:id="@+id/add_product"
+                    android:layout_below="@+id/form_layout"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_rowSpan="1"
+                    android:textColor="#ffffffff"
+                    android:background="@color/button"
+                    android:layout_margin="8dp"
+                    style="@style/BtnStyle" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
